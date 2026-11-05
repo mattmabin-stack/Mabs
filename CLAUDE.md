@@ -4,15 +4,24 @@ Claude reads this file at the start of every session. It's your project's standi
 
 ## ✏️ About this project
 
-- **What we're building:** (one or two sentences, e.g. "A one-page microsite for a fictional congress symposium" or "A simple tracker for my professional development goals")
-- **Who it's for:** (who will use it, and on what device)
-- **What "done" looks like today:** (the smallest version you'd be happy to show the group at 12:30)
+- **What we're building:** The Wizzard Dispatch, a one-page interactive newsletter. Each story is a full-screen section, and as you scroll the background colour and a brand shape (orb, hanging circles, tiles, a counting number, a line network, a speech bubble) animate to match the story.
+- **Who it's for:** Colleagues and the bootcamp group, reading on a laptop or a phone.
+- **What "done" looks like today:** Issue 11 live on Vercel: a cover with contents, five stories and a sign-off, working smoothly on phone and laptop.
 
 ## ✏️ Look and feel
 
-- **Brand:** (e.g. Wizzard: Inter for body text, Montserrat for headings; or a fictional client's colours)
-- **Tone:** (e.g. clear, warm, scientific but not stuffy)
-- **Reference:** (a site you like, or "clean and simple")
+- **Brand:** Wizzard. Navy `#041E42` / `#041E4B` and paper `#F8F8F8` backgrounds, hot pink `#FF2EA6` as the one accent, and the diagonal pink-to-blue brand gradient. Inter Black for headlines, Montserrat for everything you read. Flat colour, no drop shadows on cards, 16px rounded corners.
+- **Tone:** Wizzard tone of voice: friendly, energetic, succinct. British English, sentence-case headings, "we" and "you", no Oxford comma, spaced en dashes, no exclamation marks, no emoji.
+- **Reference:** The Wizzard credentials deck: one big idea per screen, headline, short pink rule, one lead paragraph, then bullets.
+
+## How the newsletter works
+
+- `index.html` holds the content. Each story is a `<section class="story">` with an `id` (used by the contents list and the side rail), a `data-scene` (which shape shows) and a `data-ground` (`paper`, `navy` or `gradient`).
+- `styles.css` holds the colours as variables at the top, then the backdrop shapes, then a "scene choreography" block that says which shape appears in which scene.
+- `script.js` watches the scroll, works out which story is in the middle of the screen, and switches the scene. It also drives the progress bar, the 0–26 counter and the copy-link button.
+- To add a story: copy a `<section class="story">`, give it a new `id`, pick a scene and ground, and add a matching link to the cover contents and the side rail.
+- Keep alternating grounds (paper, navy, gradient) so each change of story is visible. Text on the gradient sits on a translucent navy panel so it stays readable.
+- Animations switch off for anyone with "reduce motion" turned on. Keep it that way.
 
 ## About me
 
