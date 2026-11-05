@@ -2,24 +2,181 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My first site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wizzard Dispatch</title>
+  <meta name="description" content="Issue 11 of the Wizzard Dispatch: a scroll-driven newsletter. Training exercise with made-up content.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@800;900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <main>
-    <p class="eyebrow">It's alive</p>
-    <h1>Hello, world.</h1>
-    <p>If you can read this on a real web address, your site is deployed. Now open Claude Code and ask it to turn this page into something of your own.</p>
-  </main>
+<body data-scene="cover" data-ground="paper">
 
-  <footer>
-    Training exercise. Not a real product, and all data is made up.
-  </footer>
+<header class="bar">
+  <a class="brand" href="#cover" aria-label="Wizzard Dispatch, back to the cover">
+    <svg viewBox="93.709 56.018 83.291 60.47" aria-hidden="true"><path fill="#041E42" d="M129.931 116.488C126.877 116.488 123.89 114.969 122.14 112.194L96.42 71.419C93.709 67.121 94.996 61.44 99.294 58.729C103.59 56.018 109.274 57.304 111.983 61.602L137.704 102.378C140.415 106.675 139.129 112.357 134.831 115.068C133.307 116.029 131.609 116.488 129.931 116.488"/><path fill="#041E42" d="M160.735 116.488C157.681 116.488 154.694 114.969 152.944 112.194L127.224 71.419C124.514 67.121 125.8 61.44 130.098 58.729C134.395 56.018 140.078 57.304 142.788 61.602L168.508 102.378C171.219 106.675 169.933 112.357 165.635 115.068C164.111 116.029 162.413 116.488 160.735 116.488"/><path fill="#FF2EA6" d="M166.605 78.098C172.346 78.098 177.001 73.446 177.001 67.703C177.001 61.961 172.346 57.309 166.605 57.309C160.864 57.309 156.21 61.961 156.21 67.703C156.21 73.446 160.864 78.098 166.605 78.098"/></svg>
+    <span class="wordmark">WIZZARD</span>
+  </a>
+  <div class="issue"><b>Dispatch</b> · Issue 11<span class="long"> · November 2026</span></div>
+  <div class="progress" id="progress"></div>
+</header>
 
-  <script src="script.js"></script>
+<div class="stage" aria-hidden="true">
+  <div class="ground paper"></div>
+  <div class="ground navy"></div>
+  <div class="ground gradient"></div>
+  <div class="anchor">
+    <div class="ring r1"></div>
+    <div class="ring r2"></div>
+    <div class="ring r3"></div>
+    <div class="hang">
+      <span class="line h1"></span><span class="dot h1"></span>
+      <span class="line h2"></span><span class="dot h2"></span>
+    </div>
+    <div class="tiles">
+      <div class="tile"><span class="big">1</span><span class="small">idea per stand</span></div>
+      <div class="tile"><span class="big">3s</span><span class="small">walk-past test</span></div>
+      <div class="tile"><span class="big">2</span><span class="small">ways to talk</span></div>
+    </div>
+    <div class="num"><span id="count">26</span><small>Years young</small></div>
+    <svg class="neuro" viewBox="0 0 400 400">
+      <path class="p-pink" pathLength="1" d="M200 200 Q205 150 220 110"/>
+      <path class="p-sky" pathLength="1" d="M220 110 Q150 80 80 90"/>
+      <path class="p-pink" pathLength="1" d="M220 110 Q270 70 310 70"/>
+      <path class="p-sky" pathLength="1" d="M200 200 Q290 200 360 230"/>
+      <path class="p-pink" pathLength="1" d="M360 230 Q340 300 290 350"/>
+      <path class="p-sky" pathLength="1" d="M200 200 Q150 280 110 330"/>
+      <path class="p-pink" pathLength="1" d="M110 330 Q50 280 40 210"/>
+      <path class="p-sky" pathLength="1" d="M40 210 Q50 140 80 90"/>
+      <path class="p-sky" pathLength="1" d="M200 200 Q240 290 290 350"/>
+      <circle r="6" cx="220" cy="110"/><circle r="5" cx="80" cy="90"/><circle r="7" cx="310" cy="70" class="hub"/>
+      <circle r="5" cx="360" cy="230"/><circle r="6" cx="290" cy="350" class="hub"/><circle r="5" cx="110" cy="330"/><circle r="6" cx="40" cy="210"/>
+    </svg>
+    <div class="bubble"><b>Your seat’s here.</b><span>Two roles open in the London studio</span></div>
+    <div class="orb"></div>
+    <div class="mark"><svg viewBox="93.709 56.018 83.291 60.47"><path fill="#FFFFFF" d="M129.931 116.488C126.877 116.488 123.89 114.969 122.14 112.194L96.42 71.419C93.709 67.121 94.996 61.44 99.294 58.729C103.59 56.018 109.274 57.304 111.983 61.602L137.704 102.378C140.415 106.675 139.129 112.357 134.831 115.068C133.307 116.029 131.609 116.488 129.931 116.488"/><path fill="#FFFFFF" d="M160.735 116.488C157.681 116.488 154.694 114.969 152.944 112.194L127.224 71.419C124.514 67.121 125.8 61.44 130.098 58.729C134.395 56.018 140.078 57.304 142.788 61.602L168.508 102.378C171.219 106.675 169.933 112.357 165.635 115.068C164.111 116.029 162.413 116.488 160.735 116.488"/><path fill="#041E42" d="M166.605 78.098C172.346 78.098 177.001 73.446 177.001 67.703C177.001 61.961 172.346 57.309 166.605 57.309C160.864 57.309 156.21 61.961 156.21 67.703C156.21 73.446 160.864 78.098 166.605 78.098"/></svg></div>
+  </div>
+</div>
+
+<nav aria-label="Stories in this issue">
+  <ol class="rail" id="rail">
+    <li><a href="#cover"><span class="lab">Cover</span><span class="dot"></span></a></li>
+    <li><a href="#ai"><span class="lab">AI in the studio</span><span class="dot"></span></a></li>
+    <li><a href="#congress"><span class="lab">Congress season</span><span class="dot"></span></a></li>
+    <li><a href="#milestone"><span class="lab">26 years</span><span class="dot"></span></a></li>
+    <li><a href="#neurology"><span class="lab">Neurology</span><span class="dot"></span></a></li>
+    <li><a href="#careers"><span class="lab">Join us</span><span class="dot"></span></a></li>
+    <li><a href="#signoff"><span class="lab">Sign-off</span><span class="dot"></span></a></li>
+  </ol>
+</nav>
+
+<main>
+  <section class="story cover is-active" id="cover" data-scene="cover" data-ground="paper">
+    <div class="story-inner">
+      <p class="eyebrow">The Wizzard Dispatch ▶ Issue 11 ▶ November 2026</p>
+      <h1>Science seen <span class="grad">creatively</span></h1>
+      <hr class="rule">
+      <p class="lead">Five stories from the studio this month – from what congress season taught us to the two seats we’re looking to fill.</p>
+      <ol class="contents">
+        <li><a href="#ai"><span class="n">01</span><span class="t">AI-powered intelligence, human-made magic</span><span class="k">Thinking</span></a></li>
+        <li><a href="#congress"><span class="n">02</span><span class="t">Three things a busy stand taught us</span><span class="k">Congress</span></a></li>
+        <li><a href="#milestone"><span class="n">03</span><span class="t">26 years young</span><span class="k">Milestone</span></a></li>
+        <li><a href="#neurology"><span class="n">04</span><span class="t">Making the invisible visible</span><span class="k">Expertise</span></a></li>
+        <li><a href="#careers"><span class="n">05</span><span class="t">Two seats open in the studio</span><span class="k">Join us</span></a></li>
+      </ol>
+      <div class="hint"><i></i>Scroll to move between stories</div>
+    </div>
+  </section>
+
+  <section class="story" id="ai" data-scene="ai" data-ground="navy">
+    <div class="story-inner">
+      <p class="eyebrow">01 ▶ Thinking</p>
+      <h2>AI-powered <span class="hl">intelligence</span>. Human-made <span class="hl">magic</span>.</h2>
+      <hr class="rule">
+      <p class="lead">We’ve spent this year putting AI to work where it helps most – the slow, careful groundwork – so our people have more time for the ideas.</p>
+      <ul class="bullets">
+        <li>Literature triage that surfaces the strongest evidence sooner</li>
+        <li>First-pass reference checks before anything reaches medical review</li>
+        <li>Concept routes explored in an afternoon, then crafted by hand</li>
+      </ul>
+      <p class="body">Every word that reaches a healthcare professional is still written, checked and approved by people. MLR doesn’t change because the tools do.</p>
+      <div class="trail"><span>Strategy | Education &amp; Evidence</span><span class="sep">▶</span><span>4 min read</span></div>
+    </div>
+  </section>
+
+  <section class="story" id="congress" data-scene="congress" data-ground="paper">
+    <div class="story-inner">
+      <p class="eyebrow">02 ▶ Congress season</p>
+      <h2>Three things a <span class="hl">busy stand</span> taught us</h2>
+      <hr class="rule">
+      <p class="lead">Autumn congresses are loud, crowded and short on time. Here’s what we keep coming back to when we plan a stand.</p>
+      <ol class="steps">
+        <li class="step" data-step="0"><span class="k">1</span><div><h3>One idea per stand</h3><p>If the stand needs a second headline, it needs a second stand. We pick the single thought a clinician should leave with and build everything around it.</p></div></li>
+        <li class="step" data-step="1"><span class="k">2</span><div><h3>Design for the walk-past</h3><p>Most people see a stand for a few seconds in an aisle. The headline has to land at walking pace, from the far side of the carpet.</p></div></li>
+        <li class="step" data-step="2"><span class="k">3</span><div><h3>Give field teams a conversation</h3><p>The best stands start dialogue in both directions. We give medical and field teams a prompt to open with, not a brochure to hand over.</p></div></li>
+      </ol>
+      <div class="trail"><span>Experiences &amp; Activation</span><span class="sep">▶</span><span>3 min read</span></div>
+    </div>
+  </section>
+
+  <section class="story" id="milestone" data-scene="milestone" data-ground="gradient">
+    <div class="story-inner">
+      <p class="eyebrow">03 ▶ Milestone</p>
+      <h2><span class="hl">26 years</span> young</h2>
+      <hr class="rule">
+      <p class="lead">This autumn marks 26 years of Wizzard.</p>
+      <p class="body">We started in healthcare and we’ve stayed there. Today that’s 28 hands-on experts, with partnerships across the UK, EMEA and the US. Thank you to every client and colleague who’s been part of it.</p>
+      <p class="tagline">Creating change, creatively.</p>
+    </div>
+  </section>
+
+  <section class="story" id="neurology" data-scene="neurology" data-ground="navy">
+    <div class="story-inner">
+      <p class="eyebrow">04 ▶ Expertise spotlight ▶ Neurology</p>
+      <h2>Making the <span class="hl">invisible</span> visible</h2>
+      <hr class="rule">
+      <p class="lead">Neurology asks a lot of an audience. Mechanisms happen at a scale nobody can see, and outcomes unfold over years.</p>
+      <p class="body">So we start with one honest visual metaphor, built with the medical team and tested with clinicians before it goes anywhere near a layout.</p>
+      <ul class="bullets">
+        <li>Mechanism of disease and mechanism of action films</li>
+        <li>Patient journey mapping with specialist nurses</li>
+        <li>Congress symposia and on-demand education</li>
+      </ul>
+      <p class="tagline">Navigating the clearest route through complexity.</p>
+    </div>
+  </section>
+
+  <section class="story" id="careers" data-scene="careers" data-ground="paper">
+    <div class="story-inner">
+      <p class="eyebrow">05 ▶ Join us</p>
+      <h2>Two seats open in the <span class="hl">studio</span></h2>
+      <hr class="rule">
+      <p class="lead">We’re growing the team. If you care about science and craft in equal measure, we’d like to hear from you.</p>
+      <p class="body">These roles are made-up examples for this training exercise.</p>
+      <div class="roles">
+        <div class="role"><h3>Senior Medical Writer</h3><p>Lead the evidence behind education programmes, from first read to final sign-off.</p><div class="pills"><span class="pill">Education &amp; Evidence</span><span class="pill">London / hybrid</span></div></div>
+        <div class="role"><h3>Motion Designer</h3><p>Turn mechanisms and data into films that clinicians remember.</p><div class="pills"><span class="pill">Brand &amp; Campaign</span><span class="pill">London / hybrid</span></div></div>
+      </div>
+      <div class="apply"><span>Find out more at</span><code id="site">example.com/careers</code><button class="btn" id="copy" type="button">Copy link</button></div>
+    </div>
+  </section>
+
+  <section class="story signoff" id="signoff" data-scene="signoff" data-ground="gradient">
+    <div class="story-inner">
+      <p class="eyebrow">That’s all for November</p>
+      <h2>Until next <span class="hl">month</span></h2>
+      <hr class="rule">
+      <p class="lead">Science seen creatively. AI-powered intelligence. Human-made magic.</p>
+      <p class="address">Wizzard Dispatch ▶ Issue 11 ▶ Training exercise</p>
+    </div>
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  Training exercise. Not a real product, and all data is made up.
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
